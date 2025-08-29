@@ -1,0 +1,302 @@
+  
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: radial-gradient(ellipse at center, #000000, #0a0a1a);
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #mensaje {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 10;
+    }
+
+    #continuar {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 28px;
+    background: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 1s ease;
+    z-index: 10;
+    }
+
+    #continuar:hover {
+      background: #ff3e6c;
+    }
+
+    .fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+    }
+
+    @keyframes aparecer {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+    }
+
+    #segundaPantalla > div {
+    animation: aparecer 1.5s ease forwards;
+    }
+
+    .imagen{
+        /* max-height: 300px;  */
+        object-fit: cover;
+    }
+
+  .scene {
+  width: 100%;
+  max-width: 280px;
+  height: 100%;
+  aspect-ratio: 2 / 3;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.scene:hover .card {
+  transform: rotateY(180deg);
+}
+
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  padding: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  padding: 10px;
+  border: 0;
+}
+
+.caption {
+  margin: 12px 0;
+  font-size: 1rem;
+  color: #333;
+  font-style: italic;
+  text-align: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #fff;
+}
+
+.card-back p {
+  font-size: 1.05rem;
+  color: #555;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-back i {
+  color: #ff6f91;
+  margin-right: 8px;
+}
+
+#jugarBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 24px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+#jugarBtn:hover {
+  background: #574fd6;
+}
+
+#carta {
+  padding: 40px;
+  max-width: 700px;
+  margin: 100px auto;
+  background: white;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#cartaContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#cartaContenido {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 12px;
+  padding: 40px 30px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+#cartaContenido {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 12px;
+  padding: 40px 30px;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cerrar-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cerrar-btn:hover {
+  color: #ff3e6c;
+}
+
+#musicPlayer {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 15px 20px;
+  color: white;
+  z-index: 999;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  width: 220px;
+}
+
+#musicPlayer #songTitle {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#musicPlayer .controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+#musicPlayer button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#musicPlayer button:hover {
+  color: #ff6f91;
+}
+
+
+#mensajeMusica {
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+  background-color: #ff6f91;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  z-index: 1000;
+  animation: fadeOut 4s ease forwards;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Animación para desaparecer */
+@keyframes fadeOut {
+  0% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-20px); display: none; }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Alondra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+<div id="mensaje"></div>
+<button id="continuar">Continuar</button>
+
+<div id="segundaPantalla" style="display: none; padding: 60px 20px;">
+  <div class="text-center mb-4">
+    <h1>✨RECUERDOS... ✨</h1>
+    <p style="font-size: 1.2rem;">Cada imagen, cada lugar... es un recuerdo que se me viene a la mente.</p>
+  </div>
+
+  <div class="container">
+    <div class="row g-4 mb-3">
+      <!-- Fila de imágenes -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="scene">
+          <div class="card">
+            <!-- Frente -->
+            <div class="card-face card-front">
+              <img src="img/nasa.jpeg" alt="Recuerdo especial">
+              <div class="caption">La nasa</div>
+            </div>
+
+            <!-- Parte trasera -->
+            <div class="card-face card-back">
+              <!-- <p>Este día fue mágico ✨<br>tantas caminatas a tu lado 💖</p>
+              <br><p>recuerdos que me traen nostalgia 💖</p> -->
+              <p><i class="fas fa-route"></i> Este día fue mágico ✨<br><i class="fas fa-heart"></i> tantas caminatas a tu lado</p>
+              <p><i class="fas fa-clock"></i> recuerdos que me traen nostalgia</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="scene">
+          <div class="card">
+            <!-- Frente -->
+            <div class="card-face card-front">
+              <img src="img/paloma.jpeg" alt="Recuerdo especial">
+              <div class="caption">La paloma</div>
+            </div>
+
+            <!-- Parte trasera -->
+            <div class="card-face card-back">
+              <!-- <p>Dia de galletas ✨<br> Esuvieron muy ricas 💖</p>
+              <p>Las palomas volaron hacia mi ✨<br> 💖</p> -->
+              <p><i class="fas fa-cookie-bite"></i> Día de galletas ✨<br><i class="fas fa-smile"></i> Estuvieron muy ricas</p>
+              <p><i class="fas fa-dove"></i> Las palomas volaron hacia mí ✨</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="scene">
+          <div class="card">
+            <!-- Frente -->
+            <div class="card-face card-front">
+              <img src="img/socabaya.jpeg" alt="Recuerdo especial">
+              <div class="caption">Socabaya</div>
+            </div>
+
+            <!-- Parte trasera -->
+            <div class="card-face card-back">
+              <!-- <p>Este día adoptaste una gatita ✨<br>Se durmio contigo 💖</p> -->
+               <p><i class="fas fa-cat"></i> Este día adoptaste una gatita ✨<br><i class="fas fa-bed"></i> Se durmió contigo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+        <div class="row g-4 mb-3">
+      <!-- Fila de imágenes -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="scene">
+          <div class="card">
+            <!-- Frente -->
+            <div class="card-face card-front">
+              <img src="img/tiabaya.jpeg" alt="Recuerdo especial">
+              <div class="caption">Tiabaya</div>
+            </div>
+
+            <!-- Parte trasera -->
+            <div class="card-face card-back">
+              <!-- <p>Este día abrazaste a un perrito ✨<br>Me dio muchos celos :/</p> -->
+               <p><i class="fas fa-dog"></i> Abrazaste a un perrito ✨<br><i class="fas fa-face-angry"></i> Me dio muchos celos 😠</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="scene">
+          <div class="card">
+            <!-- Frente -->
+            <div class="card-face card-front">
+              <img src="img/mirador.jpeg" alt="Recuerdo especial">
+              <div class="caption">Sachaca</div>
+            </div>
+
+            <!-- Parte trasera -->
+            <div class="card-face card-back">
+              <!-- <p>Este día me recuerda a la cancion del dembow ✨<br>Tambien me recuerda al poemos que escribimos juntos </p> -->
+               <p><i class="fas fa-music"></i> Me recuerda al dembow ✨<br><i class="fas fa-feather-alt"></i> y al poema que escribimos</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="scene">
+          <div class="card">
+            <!-- Frente -->
+            <div class="card-face card-front">
+              <img src="img/estacion1.jpeg" alt="Recuerdo especial">
+              <div class="caption">La estacion</div>
+            </div>
+
+            <!-- Parte trasera -->
+            <div class="card-face card-back">
+              <!-- <p>Este día estuvimos con gripe ✨<br>Te lleve a casa 💖</p> -->
+              <p><i class="fas fa-head-side-cough"></i> Estuviste con gripe ✨<br><i class="fas fa-house-chimney-heart"></i> Te llevé a casa</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<button id="jugarBtn" class="btn btn-outline-light position-fixed bottom-0 end-0 m-4 shadow">¿Adivina?</button>
+<div class="modal fade" id="claveModal" tabindex="-1" aria-labelledby="claveModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="claveModalLabel">Escribe tu nombre 🗝️</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <input type="password" id="claveInput" class="form-control" placeholder="Ingresa la clave...">
+        <div id="claveError" class="text-danger mt-2 d-none">Clave incorrecta 😥</div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-light" id="validarClaveBtn">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cartaContainer" style="display: none;">
+  <div id="cartaContenido">
+    <button id="cerrarCartaBtn" class="cerrar-btn">&times;</button>
+    <h2 class="text-center mb-4">💌 Carta para ti</h2>
+    <p id="cartaTexto" class="fs-5 text-center"></p>
+  </div>
+</div>
+
+</div>
+
+<div id="mensajeMusica">🎵 Dale play aquí</div>
+
+<div id="musicPlayer">
+  <div id="songTitle">Canción: --</div>
+  <div class="controls">
+    <button onclick="prevSong()">⏮️</button>
+    <button onclick="togglePlayPause()">⏯️</button>
+    <button onclick="nextSong()">⏭️</button>
+  </div>
+  <audio id="music" preload="auto"></audio>
+</div>
+
+
+<!-- 🔊 Sonido estrella fugaz -->
+<!-- <audio id="fiuu-sound" src="https://cdn.pixabay.com/audio/2023/03/26/audio_ef94d1957a.mp3" preload="auto"></audio> -->
+<!-- <audio src="audio/iñigo quintero - Si No Estás (Letra Oficial).mp3" autoplay loop controls hidden></audio> -->
+<script src="https://kit.fontawesome.com/4389c76f2a.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
