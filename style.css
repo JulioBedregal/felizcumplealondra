@@ -300,3 +300,27 @@
   80% { opacity: 1; }
   100% { opacity: 0; transform: translateY(-20px); display: none; }
 }
+
+@media (max-width: 768px) {
+  #musicPlayer {
+    bottom: 20px; /* más abajo que el botón continuar */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+  }
+
+  #mensajeMusica {
+    bottom: 90px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    text-align: center;
+    width: auto;
+  }
+
+  #continuar {
+    top: 65%; /* desplaza el botón más arriba si hace falta */
+  }
+}
